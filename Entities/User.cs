@@ -14,12 +14,12 @@ namespace Entities
         [Required(ErrorMessage = "Bitte geben Sie ihren Vornamen ein!")]
         [Display(Name ="Vorname")]
         [StringLength(100, ErrorMessage = "{0} must be at least {2} characters long.", MinimumLength = 3)]
-        public string Vorname { get; set; }
+        public string Name { get; set; }
 
         [Required(ErrorMessage = "Bitte geben Sie ihren Nachnamen ein!")]
         [Display(Name ="Nachname")]
         [StringLength(100, ErrorMessage = "{0} must be at least {2} characters long.", MinimumLength = 2)]
-        public string Nachname { get; set; }
+        public string Surname { get; set; }
 
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "Bitte geben Sie ihre Email ein!")]
