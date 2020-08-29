@@ -7,6 +7,6 @@ namespace DataAccess.Abstract
 {
     public interface IUserRepository:IRepository<User>
     {
-
+        IEnumerable<User> GetAll5User();
     }
 }
