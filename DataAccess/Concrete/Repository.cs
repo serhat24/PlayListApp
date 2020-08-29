@@ -14,84 +14,36 @@ namespace DataAccess.Concrete
         {
             _context = context;
         }
-        public bool AddEntity(TEntity entity)
+        public void AddEntity(TEntity entity)
         {
-            try
-            {
-                _context.Set<TEntity>().Add(entity);
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            
+              _context.Set<TEntity>().Add(entity);
+                
         }
 
-        public bool AddRangeEntities(IEnumerable<TEntity> entities)
+        public void AddRangeEntities(IEnumerable<TEntity> entities)
         {
-            try
-            {
                 _context.Set<TEntity>().AddRange(entities);
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            
-           
         }
 
-        public bool DeleteEntity(TEntity entity)
+        public void DeleteEntity(TEntity entity)
         {
-            try
-            {
-                _context.Set<TEntity>().Remove(entity);
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            
+            _context.Set<TEntity>().Remove(entity);
         }
 
-        public bool DeleteEntityById(int id)
+        public void DeleteEntityById(int id)
         {
             var entity=_context.Find<TEntity>(id);
 
-            try
-            {
                 if (entity != null)
                 {
                     _context.Set<TEntity>().Remove(entity);
                 }
-                return true;
-            }
-            catch (Exception)
-            {
-
-                return false;
-            }
-            
-
         }
 
-        public bool DeleteRangeEntity(IEnumerable<TEntity> entities)
+        public void DeleteRangeEntity(IEnumerable<TEntity> entities)
         {
-            try
-            {
-                _context.Set<TEntity>().RemoveRange(entities);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
+            _context.Set<TEntity>().RemoveRange(entities);
+            
         }
 
         public IEnumerable<TEntity> GetEntities()

@@ -9,12 +9,12 @@ namespace DataAccess.Abstract
         TEntity GetEntityById(int id);
         IEnumerable<TEntity> GetEntities();
 
-        bool AddEntity(TEntity entity);
-        bool AddRangeEntities(IEnumerable<TEntity> entities);
+        void AddEntity(TEntity entity);
+        void AddRangeEntities(IEnumerable<TEntity> entities);
 
-        bool DeleteEntity(TEntity entity);
-        bool DeleteEntityById(int id);
-        bool DeleteRangeEntity(IEnumerable<TEntity> entities);
+        void DeleteEntity(TEntity entity);
+        void DeleteEntityById(int id);
+        void DeleteRangeEntity(IEnumerable<TEntity> entities);
 
     }
 }
