@@ -10,7 +10,7 @@ namespace DataAccess.Concrete
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected DbContext _context;
-        public Repository(DbContext context)
+        public Repository(DbContext context) 
         {
             _context = context;
         }

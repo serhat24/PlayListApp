@@ -8,7 +8,6 @@ namespace DataAccess.Abstract
     {
 
         int Complete();
-        int Mahmut();
-        int Lale();
+        
     }
 }

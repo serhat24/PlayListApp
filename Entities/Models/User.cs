@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Entities
+namespace Entities.Models
 {
-    public class User
+    public class User:BaseModel
     {
         [Key]
         public int Id { get; set; }

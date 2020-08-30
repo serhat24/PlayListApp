@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Entities
+namespace Entities.Models
 {
-    public class Musik
+    public class Musik:BaseModel
     {
         [Key]
         public int Id { get; set; }
