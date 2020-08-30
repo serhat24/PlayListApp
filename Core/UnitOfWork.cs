@@ -1,20 +1,20 @@
 ﻿
-using DataAccess.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccess.Abstract
+
+namespace Core
 {
     public class UnitOfWork : IUnitOfWork
     {
 
-        private PlayListAppContext _playListAppContext;
-       
+        private DbContext _dbContext;
 
-        public UnitOfWork(PlayListAppContext playListAppContext)
+        public UnitOfWork(DbContext dbContext)
         {
-            _playListAppContext = playListAppContext;
+            _dbContext = dbContext;
             UserRepository = new UserRepository(_playListAppContext);
 
         }

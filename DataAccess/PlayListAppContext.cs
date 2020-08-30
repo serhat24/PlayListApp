@@ -9,14 +9,15 @@ namespace DataAccess
 {
     public class PlayListAppContext:DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        
+        public PlayListAppContext(DbContextOptions<PlayListAppContext> options):base(options)
         {
            
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            optionsBuilder.UseMySQL("server=localhost;database=PlayListApp;user=root;password=");
         }
 
         public DbSet<User> Users { get; set; }

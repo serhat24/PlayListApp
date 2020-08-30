@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Core
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
