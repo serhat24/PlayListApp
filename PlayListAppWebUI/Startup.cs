@@ -28,7 +28,7 @@ namespace PlayListAppWebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<PlayListAppContext>(options => options.UseMySQL(Configuration["ConnectionStrings:DefaultConnection"]));
+            //services.AddDbContext<PlayListAppContext>(options => options.UseMySQL(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

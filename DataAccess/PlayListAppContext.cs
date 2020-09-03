@@ -17,7 +17,7 @@ namespace DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=PlayListApp;user=root;password=");
+            optionsBuilder.UseMySQL("server=localhost;database=PlayListApp;user=giray;password=sekerlen");
         }
 
         public DbSet<User> Users { get; set; }

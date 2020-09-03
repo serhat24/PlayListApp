@@ -9,13 +9,10 @@ using System.Text;
 
 namespace DataAccess.Concrete
 {
-    public class UserRepository : Repository<User>,IUserRepository
+    public class UserRepository : Repository<User>
     {
         public UserRepository(DbContext context) : base(context)
         {
-
         }
-
-
     }
 }

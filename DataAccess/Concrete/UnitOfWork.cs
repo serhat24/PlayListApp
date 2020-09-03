@@ -19,7 +19,7 @@ namespace DataAccess.Abstract
 
         }
 
-        public IUserRepository UserRepository { get; private set; }
+        public UserRepository UserRepository { get; private set; }
 
         public int Complete()
         {
